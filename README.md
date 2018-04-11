@@ -8,4 +8,4 @@ Note:
 Pixels Per Unit should be set to 1 for all sprites and for best results all sprites should be using integer positions or should be the child of a moving object with a SnapToPixel component.
 
 Known Issues: 
-There is a but that leads to me adding 1px black bars to the screen to prevent shimmering with some common resolutions. It's explained further in PixelCamera.cs but I think it looks rather nice.
+There is a bug that leads to me adding 1px black bars to the screen to prevent shimmering with some common resolutions. It's explained further in PixelCamera.cs but I think it looks rather nice.
