@@ -4,5 +4,8 @@ After playing Celeste I was inspired to play around with something similar in Un
 
 Simply drag the camera prefab into your scene or add the PixelCamera component to your main camera, all image effects are supported but may be processed at native resolution before downscaling. If you wish to add pixel perfect movement to your existing camera alongside the rendering then add a SnapToPixel component to your camera's parent GameObject.
 
+Note: 
+Pixels Per Unit should be set to 1 for all sprites and for best results all sprites should be using integer positions or should be the child of a moving object with a SnapToPixel component.
+
 Known Issues: 
 There is a but that leads to me adding 1px black bars to the screen to prevent shimmering with some common resolutions. It's explained further in PixelCamera.cs but I think it looks rather nice.
