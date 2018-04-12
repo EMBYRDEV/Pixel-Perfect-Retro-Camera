@@ -25,9 +25,9 @@ public class PixelCamera : MonoBehaviour {
 			issue when blitting back to screen.
 		*/
 		
-		cam.orthographicSize = ((referenceHeight - 1) / 2) / (float)pixelsPerUnit;
-		
 		renderHeight = referenceHeight - 2;
+		cam.orthographicSize = (renderHeight / 2) / (float)pixelsPerUnit;
+		
 		int scale = Screen.height / renderHeight;
 		
 		// Height is snapped to the closest whole multiple of reference height.
