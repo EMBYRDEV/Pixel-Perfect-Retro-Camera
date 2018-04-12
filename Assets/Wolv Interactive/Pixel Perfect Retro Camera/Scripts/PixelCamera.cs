@@ -4,6 +4,7 @@ using System.Collections;
 [ExecuteInEditMode]
 public class PixelCamera : MonoBehaviour {
 	public int referenceHeight = 180;
+	public int pixelsPerUnit = 32;
 
 	private int renderWidth;
 	private int renderHeight;
@@ -23,9 +24,10 @@ public class PixelCamera : MonoBehaviour {
 			resolution to add a 1px border on the top and bottom to prevent shimmering 
 			issue when blitting back to screen.
 		*/
-		cam.orthographicSize = (referenceHeight - 1) / 2;
 		
-		renderHeight = (int)(cam.orthographicSize * 2);
+		cam.orthographicSize = ((referenceHeight - 1) / 2) / (float)pixelsPerUnit;
+		
+		renderHeight = referenceHeight - 2;
 		int scale = Screen.height / renderHeight;
 		
 		// Height is snapped to the closest whole multiple of reference height.
