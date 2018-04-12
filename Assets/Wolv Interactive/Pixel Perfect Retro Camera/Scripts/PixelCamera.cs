@@ -25,7 +25,7 @@ public class PixelCamera : MonoBehaviour {
 			issue when blitting back to screen.
 		*/
 		
-		renderHeight = referenceHeight - 2;
+		renderHeight = referenceHeight;
 		cam.orthographicSize = (renderHeight / 2) / (float)pixelsPerUnit;
 		
 		int scale = Screen.height / renderHeight;
@@ -39,7 +39,7 @@ public class PixelCamera : MonoBehaviour {
 			the render width to add a 1px border to the sides to prevent shimmering 
 			issue when blitting back to screen.
 		*/
-		renderWidth = (int)(Screen.width / scale) - 2;			
+		renderWidth = (int)(Screen.width / scale);			
 		actualWidth = (int)(renderWidth * scale);
 
 		Rect rect = cam.rect;
