@@ -20,9 +20,7 @@ public class PixelCamera : MonoBehaviour {
 	void Update() {
 		/*
 			Orthographic size is half of reference resolution since it is measured
-			from center to the top of the screen. We subtract 1 from the reference
-			resolution to add a 1px border on the top and bottom to prevent shimmering 
-			issue when blitting back to screen.
+			from center to the top of the screen.
 		*/
 		
 		renderHeight = referenceHeight;
@@ -35,9 +33,7 @@ public class PixelCamera : MonoBehaviour {
 		
 		/*
 			Width isn't snapped like height is and will fill the entire width of 
-			the monitor using the scale determined by the height. We subtract 2 from
-			the render width to add a 1px border to the sides to prevent shimmering 
-			issue when blitting back to screen.
+			the monitor using the scale determined by the height.
 		*/
 		renderWidth = (int)(Screen.width / scale);			
 		actualWidth = (int)(renderWidth * scale);
