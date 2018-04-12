@@ -18,20 +18,10 @@ public class PixelCamera : MonoBehaviour {
 
 	void Update() {
 		/*
-			Orthographic size is half of reverence resolution since it is measured
+			Orthographic size is half of reference resolution since it is measured
 			from center to the top of the screen. We subtract 1 from the reference
-			resolution to prevent a bug that causes horizontal shimering when the
-			reference height is an exact multiple of sme common resolutions.
-			
-			For example 180 is a perfect multiple of 720 and causes issues when 
-			rendering at 1280x720. Same issue present at 1920x1080. Oddle enough 
-			this can be solved by increasing the horizontal resolution enough
-			even though the issue should only be tied to the verticle resolution...
-			
-			I may revisit this in the future but for now we get some artsy *cinematic*
-			black bars on the top and bottom and it seems to fix the issue; at least 
-			as long as people stick to sane values... they could just ruin everything 
-			again by setting scale to something like 181.
+			resolution to add a 1px border on the top and bottom to prevent shimmering 
+			issue when blitting back to screen.
 		*/
 		cam.orthographicSize = (referenceHeight - 1) / 2;
 		
@@ -41,8 +31,13 @@ public class PixelCamera : MonoBehaviour {
 		// Height is snapped to the closest whole multiple of reference height.
 		actualHeight = (int)(renderHeight * scale);
 		
-		// Width isn't locked to the pixel grid and will fill the entire width of the monitor.
-		renderWidth = (int)(Screen.width / scale);			
+		/*
+			Width isn't snapped like height is and will fill the entire width of 
+			the monitor using the scale determined by the height. We subtract 2 from
+			the render width to add a 1px border to the sides to prevent shimmering 
+			issue when blitting back to screen.
+		*/
+		renderWidth = (int)(Screen.width / scale) - 2;			
 		actualWidth = (int)(renderWidth * scale);
 
 		Rect rect = cam.rect;

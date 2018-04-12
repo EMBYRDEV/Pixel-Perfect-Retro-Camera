@@ -440,6 +440,35 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.003125012
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.00555557
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.99375
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.98888886
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013941733808, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010010467388, guid: 6622b93cfd71148f88fa3b6097d487b6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6622b93cfd71148f88fa3b6097d487b6, type: 2}
   m_IsPrefabParent: 0
