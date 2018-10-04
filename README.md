@@ -1,4 +1,4 @@
-![Screenshot](https://i.dbr.ee/QcZL/original_Screenshot_32.png)
+![Screenshot](https://static1.squarespace.com/static/5a680d68fe54ef42d1f5f060/t/5acdcb4c70a6adb35386e98a/1523436792308/pprc.gif)
 
 After playing Celeste I was inspired to play around with something similar in Unity. It seems no one has made a pixel perfect retro camera yet so I decided to create this super simple system for rendering your Unity game at a reference resolution such as 320x180 and also retaining pixel perfect movement with no shimmering whilst also supporting other aspect ratios.
 
